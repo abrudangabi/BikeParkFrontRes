@@ -1,0 +1,25 @@
+<h2>Rezervari Bike Park</h2>
+
+<div>
+
+  <form>
+    <label><p>Rezervare Bike Park ziua:</p>
+      <input type="date" #ziua>
+    </label>
+  </form>
+
+  <button class="add" (click)="addFinal(ziua.value, bikepark_id.value, biker_id.value); ziua.value=''">
+    add
+  </button>
+
+</div>
+
+<ul class="heroes">
+  <li *ngFor="let hero of rezervaribikepark">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">*</span> {{hero.ziua}}
+    </a>
+    <button class="delete" title="delete hero"
+            (click)="delete(hero)">x</button>
+  </li>
+</ul>

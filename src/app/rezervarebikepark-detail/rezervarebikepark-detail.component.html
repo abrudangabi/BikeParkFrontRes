@@ -1,0 +1,19 @@
+<div *ngIf="rezervare">
+  <h2>{{rezervare.ziua | uppercase}} Details</h2>
+  <div><span>id: </span>{{rezervare.id}}</div>
+  <div>
+    <form>
+      <label>ziua:
+        <input type="date" [(ngModel)]="rezervare.ziua" name="ziua" placeholder="ziua"/>
+      </label>
+    </form>
+    <!--<label>
+      <input [(ngModel)]="rezervare.bikepark_id" placeholder="bikepark_id"/>
+    </label>
+    <label>
+      <input [(ngModel)]="rezervare.biker_id" placeholder="biker_id"/>
+    </label>-->
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>
